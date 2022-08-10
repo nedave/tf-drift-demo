@@ -77,6 +77,6 @@ variable "bucket_acl" {
 
 variable "versioning_enabled" {
   description = "A state of versioning. Versioning is a means of keeping multiple variants of an object in the same bucket"
-  type        = bool
-  default     = true
+  type        = string
+  default     = "Enabled"
 }
