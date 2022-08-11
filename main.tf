@@ -44,7 +44,9 @@ module "vpc" {
   enable_nat_gateway = false
   enable_vpn_gateway = var.enable_vpn_gateway
 
-  tags = var.resource_tags
+  tags = merge(var.resource_tags, {
+    yor_trace = "50701cca-e711-4802-8887-07d744b15e2e"
+  })
 }
 
 module "app_security_group" {
@@ -57,7 +59,9 @@ module "app_security_group" {
 
   ingress_cidr_blocks = module.vpc.public_subnets_cidr_blocks
 
-  tags = var.resource_tags
+  tags = merge(var.resource_tags, {
+    yor_trace = "94802ccb-8e6a-4dab-a360-b7835aba7639"
+  })
 }
 
 module "lb_security_group" {
@@ -70,6 +74,8 @@ module "lb_security_group" {
 
   ingress_cidr_blocks = ["0.0.0.0/0"]
 
-  tags = var.resource_tags
+  tags = merge(var.resource_tags, {
+    yor_trace = "a961b2d8-c758-417b-8244-f56b510db9a0"
+  })
 }
 
