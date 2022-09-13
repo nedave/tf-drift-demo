@@ -2,7 +2,7 @@ resource "aws_security_group" "ccs_drift_demo" {
 
   name        = "ccs_drift_demo"
   description = "Security group for CCS drift detection demo"
-  vpc_id      = "vpc-00e7e47a"
+  vpc_id      = "vpc-0fa41465321d0e9d0"
 
   ingress {
     self      = false
@@ -11,8 +11,7 @@ resource "aws_security_group" "ccs_drift_demo" {
     protocol  = "tcp"
 
     cidr_blocks = [
-      "10.0.0.0/16",
-      "192.168.1.0/24",
+      "10.10.0.0/16",
     ]
   }
   tags = {
