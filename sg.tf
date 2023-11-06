@@ -16,5 +16,6 @@ resource "aws_security_group" "ccs_drift_demo" {
   }
   tags = {
     yor_trace = "a65b1f8b-55fb-4f60-a009-e2c79287a0c1"
+    git_org   = "nedave"
   }
 }
