@@ -46,6 +46,8 @@ module "vpc" {
 
   tags = merge(var.resource_tags, {
     yor_trace = "50701cca-e711-4802-8887-07d744b15e2e"
+    }, {
+    git_org = "nedave"
   })
 }
 
@@ -61,6 +63,8 @@ module "app_security_group" {
 
   tags = merge(var.resource_tags, {
     yor_trace = "94802ccb-8e6a-4dab-a360-b7835aba7639"
+    }, {
+    git_org = "nedave"
   })
 }
 
@@ -76,6 +80,8 @@ module "lb_security_group" {
 
   tags = merge(var.resource_tags, {
     yor_trace = "a961b2d8-c758-417b-8244-f56b510db9a0"
+    }, {
+    git_org = "nedave"
   })
 }
 

@@ -1,6 +1,8 @@
 resource "aws_s3_bucket" "data_bucket" {
   tags = merge(var.resource_tags, {
     yor_trace = "7e306107-f0bc-4b08-91fc-db83d8785ec1"
+    }, {
+    git_org = "nedave"
   })
 }
 
